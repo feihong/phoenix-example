@@ -1,4 +1,4 @@
 <h1>Showing User</h1>
 <p>
-  <b><%= first_name(@user) %></b> (<%= @user.id %>)
+  <%= render "user.html", user: @user %>
 </p>
