@@ -43,6 +43,7 @@ defmodule Rumbl.Mixfile do
       {:cowboy, "~> 1.0"},
       {:comeonin, "~> 4.0.3"},
       {:bcrypt_elixir, "~> 1.0.3"},
+      {:phoenix_slime, git: "https://github.com/slime-lang/phoenix_slime", ref: "8ea70c4", override: true},
     ]
   end
 
