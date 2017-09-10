@@ -120,8 +120,11 @@ defmodule Rumbl.Models do
       [%Category{}, ...]
 
   """
-  def list_categories do
-    Repo.all(Category)
+  def list_categories() do
+    Category
+    |> Category.alphabetical()
+    |> Category.names_and_ids()
+    |> Repo.all()
   end
 
   @doc """

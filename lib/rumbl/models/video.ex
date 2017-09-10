@@ -4,14 +4,14 @@ defmodule Rumbl.Models.Video do
   alias Rumbl.Models.Video
 
   @required_fields [:url, :title, :description]
-  @optional_fields []
+  @optional_fields [:category_id]
 
   schema "videos" do
     field :description, :string
     field :title, :string
     field :url, :string
-    # field :user_id, :id
     belongs_to :user, Rumbl.User
+    belongs_to :category, Rumbl.Models.Category
 
     timestamps()
   end
